@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>TASK MANAGER</title>
+	<link rel="stylesheet" href="project.css" />
+</head>
+<body>
+	<main class="app">
+		<section class="greeting">
+			<h2 class="title">
+				What's up <input type="text" id="name" placeholder="Name here" />
+			</h2>
+		</section>
+		<section class="create-todo">
+			<h3>TASK MANAGER</h3>
+			<form id="new-todo-form">
+				<h4>What are you planing?</h4>
+				<input 
+					type="text" 
+					placeholder="Add your task"
+					name="content"
+					id="content" />
+				<h3>Pick a Deadline</h3>
+				<input type="date" id="dueDate"><br><br>
+				<h4>Select a category</h4>				
+				<div class="options">
+					<label>
+						<input type="radio" name="category" id="category1" value="shopping" /> 
+						<span class="bubble shopping"></span>
+						<div>Shopping</div>
+					</label>
+					<label>
+						<input type="radio" name="category" id="category2" value="personal" />
+						<span class="bubble personal"></span>
+						<div>Personal</div>
+					</label>
+				</div>
+				<input type="submit" value="ADD TASK" />
+			</form>
+		</section>
+		<section class="todo-list">
+			<h3>TASKS LIST</h3>
+
+			<div id="search-container">
+				<input type="text" id="search-input" placeholder="Search Tasks By Name">
+				<button id="voice-search-button">Voice Search</button>
+			</div>
+			
+			<div id="sorting-container">
+				<label for="sort-by">Sort by:</label>
+				<select id="sort-by">
+				  <option value="default">Default</option>
+				  <option value="completion-status">Completion Status</option>
+				  <option value="category">Category</option>
+				</select>
+			  </div>
+ 
+			<div class="list" id="todo-list"></div>
+		</section>
+	</main>
+	<script src="project.js"></script>
+</body>
+</html>
+
